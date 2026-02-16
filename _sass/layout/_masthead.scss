@@ -27,8 +27,9 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 0.5em 1em;
+    padding: 1.5em 1em;  // Cambia da 0.5em a 1.5em per più altezza
     font-family: $sans-serif-narrow;
+    font-size: $type-size-4;  // Aggiungi questa riga per font più grande
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -40,6 +41,8 @@
 
     a {
       text-decoration: none;
+      font-size: $type-size-5;  // Aggiungi questa riga per link più grandi
+      padding: 0.5em 0;  // Aggiungi padding verticale ai link
     }
   }
 }
@@ -59,23 +62,10 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-size: $type-size-5;  // Aggiungi questa riga
 
   &--lg {
     padding-right: 2em;
     font-weight: 700;
   }
-}
-
-.masthead__menu-item.selected a {
-  color: var(--global-text-color);
-  font-weight: 700;
-  border-bottom: 2px solid var(--global-text-color);
-  pointer-events: none; /* Move this here */
-  cursor: default; /* Move this here too */
-}
-
-.masthead__menu-item.selected a:hover {
-  color: var(--global-text-color);
-  border-bottom: 2px solid var(--global-text-color);
-  /* No need to repeat pointer-events and cursor here */
 }
