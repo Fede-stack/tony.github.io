@@ -63,7 +63,10 @@
   list-style-type: none;
   white-space: nowrap;
   font-size: $type-size-6;  // Aggiungi questa riga
-
+  a {
+    font-size: 18px;  // Aggiungi questa riga - aumenta da default (circa 14-16px)
+    font-weight: 500; // Opzionale: rendi il testo un po' più bold
+  }
   &--lg {
     padding-right: 2em;
     font-weight: 700;
