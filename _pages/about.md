@@ -1,7 +1,11 @@
 ---
-permalink: /about/
+permalink: /
 title: "About TONY"
+excerpt: "About TONY"
 author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 sidebar:
   nav: "docs"
 ---
