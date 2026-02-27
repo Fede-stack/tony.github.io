@@ -10,6 +10,8 @@ sidebar:
   nav: "docs"
 ---
 
+{% include toc %}
+
 # About TONY
 
 TONY is a Python package for Natural Language Processing (NLP) applied to mental health contexts.
