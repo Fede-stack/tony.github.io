@@ -18,7 +18,7 @@ The **Lexicon** module provides a comprehensive suite of interpretable lexical f
 
 
 
-```{python}
+```python
 from TONY.Lexicon import MarkersExtraction, MarkersExtractionColab
 
 app = MarkersExtractionColab() #Use MarkersExtraction if you are running it locally
@@ -29,7 +29,7 @@ app = MarkersExtractionColab() #Use MarkersExtraction if you are running it loca
 
 Alternatively, you can extract features without using the ui with two lines of code: 
 
-```{python}
+```python
 from TONY.Lexicon import LexiconLevelFeatures
 
 text = 'Some days I keep living, even though I feel completely alone in the world'
