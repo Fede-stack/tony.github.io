@@ -24,6 +24,8 @@ app = MarkersExtractionColab() #Use MarkersExtraction if you are running it loca
 Alternatively, you can extract features without using the ui with two lines of code: 
 
 ```{python}
+from TONY.Lexicon import LexiconLevelFeatures
+
 text = 'Some days I keep living, even though I feel completely alone in the world'
 markers = LexiconLevelFeatures(language="en")
 markers.extract_markers(text)
