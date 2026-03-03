@@ -32,22 +32,22 @@ main:
   - title: "Guide"
     url: /markdown/
 
-docs:
-  - title: "Table of Contents"
-    children:
-      - title: "Getting Started"
-        url: /about/#getting-started
-      - title: "Installation"
-        url: /about/#installation
-      - title: "Quick Start"
-        url: /about/#quick-start
-      - title: "Basic Configuration"
-        url: /about/#basic-configuration
-      - title: "Core Features"
-        url: /about/#core-features
-      - title: "Feature One"
-        url: /about/#feature-one
-      - title: "Feature Two"
-        url: /about/#feature-two
-      - title: "Feature Three"
-        url: /about/#feature-three
+# docs:
+#   - title: "Table of Contents"
+#     children:
+#       - title: "Getting Started"
+#         url: /about/#getting-started
+#       - title: "Installation"
+#         url: /about/#installation
+#       - title: "Quick Start"
+#         url: /about/#quick-start
+#       - title: "Basic Configuration"
+#         url: /about/#basic-configuration
+#       - title: "Core Features"
+#         url: /about/#core-features
+#       - title: "Feature One"
+#         url: /about/#feature-one
+#       - title: "Feature Two"
+#         url: /about/#feature-two
+#       - title: "Feature Three"
+#         url: /about/#feature-three
