@@ -51,21 +51,6 @@ If you are working with an Apple Silicon Mac (M1/M2/M3/M4 chip), you can run the
 
 ---
 
-## Filling BDI-II Questionnaire
-
-The **BDI-II Scorer** module automatically completes the Beck Depression Inventory II (BDI-II) questionnaire from a user's post history, using an adaptive Retrieval-Augmented Generation (aRAG) pipeline. For each BDI-II item, the module dynamically retrieves the most relevant posts from the user's history and passes them to a generative LLM to produce a structured BDI-II response. Unlike standard RAG approaches that fix the number of retrieved documents a priori, the adaptive mechanism adjusts retrieval size based on the semantic density of the user's history relative to each item — retrieving more evidence when available, and less when the signal is sparse.
-
-```python
-from TONY.BDI import BDIScorer
-
-posts = ['I have been feeling empty for weeks', 'I can barely get out of bed', ...]
-scorer = BDIScorer(model_name='gemma-27B')
-scorer.predict_BDI(posts)
-
-# Output: 21-dimensional vector of predicted BDI-II item scores
-```
-
----
 
 ## SAE Interpreter - Interpret Features with a Sparse Autoencoder
 
