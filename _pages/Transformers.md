@@ -72,7 +72,7 @@ emotioner.predict_emotions(text)
 
 ## Implemented Models *(more coming soon)*
 
-| CATEGORY | Models                 | Model (MLX)                     |
+| CATEGORY | Models                 | Models (MLX)                     |
 | --------- | ---------------------------------- | ------------------------------------ |
 | HiTOP     | FritzStack/HiTOP-QWEN4B_4bit           | FritzStack/HiTOP-QWEN4B-mlx-Q4       |
 | HiTOP     | FritzStack/HiTOP-Llama-3B_4bit     | FritzStack/HiTOP-Llama-3B-mlx-Q4     |
