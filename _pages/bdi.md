@@ -30,7 +30,7 @@ The module implements the adaptive Retrieval-Augmented Generation (aRAG) pipelin
 
 scorer.score() expects:
 * reddit_posts: a list of lists, where each inner list contains all posts written by a single user
-* bdi_items: a list of 21 items, each containing the 4 BDI-II response options (score 0–3)
+* bdi_items: a list of 21 items, each containing the 4 BDI-II response options (score 0–3). They are used to retrieve the most relevant posts through the aRAG approach.
 * items_names: a list of 21 item label strings
 
 
