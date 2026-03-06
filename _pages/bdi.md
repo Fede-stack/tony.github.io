@@ -11,7 +11,28 @@ redirect_from:
 
 ## Filling BDI-II Questionnaire
 
-The **BDI-II Scorer** module automatically completes the Beck Depression Inventory II (BDI-II) questionnaire from a user's post history, using the adaptive Retrieval-Augmented Generation (aRAG) pipeline by Ravenda et al. For each BDI-II item, the module dynamically retrieves the most relevant posts from the user's history and passes them to a generative LLM to produce a structured BDI-II response. Unlike standard RAG approaches that fix the number of retrieved documents a priori, the adaptive mechanism adjusts retrieval size based on the semantic density of the user's history relative to each item, retrieving more evidence when available, and less when the signal is sparse.
+The BDI-II Scorer module automatically completes the Beck Depression Inventory II (BDI-II) from a user's post history. Given a collection of Reddit posts written by a single user, the module produces a 21-dimensional vector of predicted item scores — one for each BDI-II item — without requiring any manual annotation.
+How it works
+The module implements the adaptive Retrieval-Augmented Generation (aRAG) pipeline introduced by Ravenda et al. The process unfolds in two stages for each of the 21 BDI-II items:
+1. Adaptive retrieval: the most semantically relevant posts are retrieved from the user's history using a mental-health-specialized embedding model (FritzStack/mpnet_MH_embedding). Unlike standard RAG, the number of retrieved posts is not fixed — it adapts to the semantic density of the user's history relative to each item, retrieving more evidence when the signal is rich and fewer posts when it is sparse.
+2. Generative scoring: the retrieved posts are passed to a generative LLM together with the four response options for the current BDI-II item. The model selects the option that best reflects the user's expressed state, returning a score from 0 to 3.
+
+**Parameters**
+
+| Parameter | Type | Description |
+|---|---|---|
+| `retriever_model_name` | `str` | HuggingFace model ID for the embedding retriever |
+| `llm_model_name` | `str` | HuggingFace model ID or API model name for the generative LLM |
+| `use_hf` | `bool` | If `True`, runs the LLM locally via HuggingFace; if `False`, uses an external API client |
+| `client` | `object` | API client instance (e.g. OpenAI, Together, Gemini) — required when `use_hf=False` |
+
+**Input format**
+
+scorer.score() expects:
+* reddit_posts: a list of lists, where each inner list contains all posts written by a single user
+* bdi_items: a list of 21 items, each containing the 4 BDI-II response options (score 0–3)
+* items_names: a list of 21 item label strings
+
 
 ```python
 from TONY.BDI import BDIScorer
