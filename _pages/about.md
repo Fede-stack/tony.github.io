@@ -21,7 +21,10 @@ The package combines two complementary approaches. First, it employs traditional
 This combination allows researchers and practitioners to analyze mental health-related texts using both interpretable methods and state-of-the-art techniques, offering flexibility for research and clinical applications.
 
  
-<img src="https://github.com/Fede-stack/TONY_py/blob/main/images/overview.png" alt="" width="600">
+<img src="https://github.com/Fede-stack/TONY_py/blob/main/images/overview.png" alt="" width="400"
+
+<img src="https://raw.githubusercontent.com/Fede-stack/TONY_py/main/images/overview.png" alt="" width="400">
+
 
 ## Getting Started
 
