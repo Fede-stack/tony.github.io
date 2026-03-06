@@ -33,8 +33,18 @@ Overview of how to begin using the package.
 !pip install git+https://github.com/Fede-stack/TONYpy.git
 ```
 
-### Use the package
+### Import the package (and have fun playing with it :) )
 
 ```python
 import TONY
+```
+## How to cite the package
+
+```bibtex
+@inproceedings{ravenda2026tony,
+  title={TONY: an open-source TOolkit for Nlp in psYchology},
+  author={Ravenda, Federico and Ravenda, Sofia Irene and Karpenko, Volodymyr and Montagnani, Daniele and Raballo, Andrea and Mira, Antonietta},
+  journal={},
+  year={2026}
+}
 ```
