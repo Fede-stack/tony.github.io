@@ -38,6 +38,7 @@ text = 'Some days I keep living, even though I feel completely alone in the worl
 irf = IRFPredictor(model_name='FritzStack/IRF-Qwen3-8B_4bit-merged')
 irf.highlight_evidence_IRF(text)
 
+# Output:
 # Question 1: Is there evidence of Thwarted Belongingness?
 # Answer: Yes
 # Text Evidence: feel completely alone
@@ -52,24 +53,33 @@ If you are working with an Apple Silicon Mac (M1/M2/M3/M4 chip), you can run the
 ---
 
 
-## SAE Interpreter - Interpret Features with a Sparse Autoencoder
+## Emotions as Markers for Specific Mental Health Conditions
 
-The **SAE Interpreter** module provides interpretable latent feature analysis using a Sparse Autoencoder (SAE) trained on 710,000 Reddit posts spanning from casual conversation to mental health-focused communities. Given an input text, the model identifies the most strongly activated latent features, each of which is automatically described in natural language, capturing the psychological and semantic content expressed in the text.
+Emotion recognition from text provides a fine-grained signal that complements both diagnostic categories and dimensional trait models. Rather than relying on broad sentiment polarity, detecting discrete emotions, enables a more subtle characterization of affective states that have been consistently linked to specific psychopathological conditions.
+
+**TONY**'s emotion module is built on **GoEmotions** (Demszky et al., 2020), a large-scale dataset of 58k Reddit comments annotated across 27 fine-grained emotion categories. The underlying model is fine-tuned to map naturalistic text onto this taxonomy, providing richer emotional resolution than standard positive/negative sentiment classifiers. As with the other neural modules, the model is available in a quantized 4-bit format and can be run locally on Apple Silicon via **MLX** for fast, privacy-preserving inference.
+
+
 
 ```python
-from TONY.SAE import SAEInterpreter
+from TONY.Emotions import Emotions_Predictor, Emotions_Predictor_mlx
 
 text = 'Some days I keep living, even though I feel completely alone in the world'
-interpreter = SAEInterpreter()
-result = interpreter.interpret(text, top_k=10)
-interpreter.plot_interpretation(result)
-
-# Feature #25 activated
-# This feature captures posts that involve questioning or describing
-# unusual perceptual experiences, often related to dissociation or
-# altered states of consciousness.
+emotioner = Emotions_Predictor(model_name='FritzStack/QWEN4B-GoEmotions_4bit')
+emotioner.predict_emotions(text)
+# Output: sadness
 ```
 
+## Implemented Models *(more coming soon)*
 
-
-
+| CATEGORY | Models                 | Model (MLX)                     |
+| --------- | ---------------------------------- | ------------------------------------ |
+| HiTOP     | FritzStack/HiTOP-QWEN4B_4bit           | FritzStack/HiTOP-QWEN4B-mlx-Q4       |
+| HiTOP     | FritzStack/HiTOP-Llama-3B_4bit     | FritzStack/HiTOP-Llama-3B-mlx-Q4     |
+| HiTOP     | FritzStack/HiTOP-Phi4_4bit         | FritzStack/HiTOP-Phi4-mlx-Q4         |
+| IRF       | FritzStack/IRF-Llama-3B_4bit       | FritzStack/IRF-Llama-3B-mlx-Q4       |
+| IRF       | FritzStack/IRF-QWEN4B_4bit         | FritzStack/IRF-QWEN4B-mlx-Q4         |
+| IRF       | FritzStack/IRF-QWEN8B_4bit         | FritzStack/IRF-QWEN8B-mlx-Q4         |
+| EMOTIONS  | FritzStack/Llama3B-GoEmotions_4bit | FritzStack/Llama3B-GoEmotions-mlx-Q4 |
+| EMOTIONS  | FritzStack/QWEN4B-GoEmotions_4bit  | FritzStack/QWEN4B-GoEmotions-mlx-Q4  |
+| EMOTIONS  | FritzStack/RACLETTE-fp16  |   |
