@@ -22,7 +22,7 @@ This combination allows researchers and practitioners to analyze mental health-r
 
  
 
-<img src="https://raw.githubusercontent.com/Fede-stack/TONY_py/main/images/overview.png" alt="" width="600">
+<img src="https://raw.githubusercontent.com/Fede-stack/TONY_py/main/images/overview.png" alt="" width="1000">
 
 
 ## Getting Started
