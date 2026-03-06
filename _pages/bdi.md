@@ -195,6 +195,13 @@ items_names = ['Sadness', 'Pessimism', 'Past Failure', 'Loss of Pleasure', 'Guil
 
 
 posts = [['I have been feeling empty for weeks', 'I can barely get out of bed', ...]]  # Each inner list contains all Reddit posts written by a single user
+
+from openai import OpenAI
+client =client = OpenAI(
+  base_url="https://openrouter.ai/api/v1",
+  api_key=operouterapi,
+)
+
 scorer = BDIScorer(
     retriever_model_name='FritzStack/mpnet_MH_embedding',
     llm_model_name='google/gemma-3-27b-it',
