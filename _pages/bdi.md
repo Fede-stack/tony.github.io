@@ -186,7 +186,7 @@ response_llms = scorer.score(reddit_posts, bdi_items, items_names)
 ```
 
 
-```
+```bibtex
 @inproceedings{ravenda2025llms,
   title={Are LLMs effective psychological assessors? Leveraging adaptive RAG for interpretable mental health screening through psychometric practice},
   author={Ravenda, Federico and Bahrainian, Seyed Ali and Raballo, Andrea and Mira, Antonietta and Kando, Noriko},
