@@ -19,7 +19,7 @@ The **Lexicon** module provides a comprehensive suite of interpretable lexical f
 > [!NOTE]
 > TONY uses spaCy under the hood. Before running the cell below, install the English language model:
 > ```bash
-> python -m spacy download en_core_web_sm
+> python3 -m spacy download en_core_web_sm
 > ```
 
 
