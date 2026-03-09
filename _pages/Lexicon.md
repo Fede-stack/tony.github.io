@@ -16,6 +16,11 @@ redirect_from:
 
 The **Lexicon** module provides a comprehensive suite of interpretable lexical features grounded in the psycholinguistic literature. Each marker has been selected based on its established relevance to mental health research: from first-person pronoun usage as a proxy for self-focus and depression, to absolutist language, negation frequency, and affective dimensions such as valence, arousal, and dominance. Rather than relying on ad hoc feature engineering, TONY consolidates a broad set of psychologically validated indicators — spanning lexical, syntactic, morphosyntactic, stylistic, emotional, and cohesion dimensions — into a single, unified extraction pipeline. This positions TONY as a fully open-source and reproducible alternative to LIWC (Linguistic Inquiry and Word Count), the most widely adopted tool in the field, which remains closed-source and commercially licensed, limiting transparency and extensibility in research workflows. 
 
+> [!NOTE]
+> TONY uses spaCy under the hood. Before running the cell below, install the English language model:
+> ```bash
+> python -m spacy download en_core_web_sm
+> ```
 
 
 ```python
