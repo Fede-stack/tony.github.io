@@ -35,7 +35,7 @@ scorer.score() expects:
 
 
 ```python
-from TONY.BDI import BDIScorer
+from TONY.retrieval import BDIScorer
 
 bdi_items = [
     # 1. Sadness
