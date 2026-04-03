@@ -62,7 +62,7 @@ The **Cognitive** module is grounded in the **ReDepress** framework (Agarwal et 
 - **Rumination** — repetitive, passive focus on negative feelings or memories, further distinguished as *brooding* (maladaptive) vs. *reflection* (adaptive)
 
 ```python
-from TONY.Cognitive import CognitivePredictor, CognitivePredictor_mlx
+from TONY.COGNITIVE import CognitivePredictor, CognitivePredictor_mlx
 
 text = 'I keep thinking about how I messed up in college. I should have studied harder and done more with my life.'
 cogn = Cognitive_Predictor(model_name='FritzStack/COGN-QWEN4B-4bit')
