@@ -77,7 +77,7 @@ emotioner.predict_emotions(text)
 | HiTOP     | FritzStack/HiTOP-QWEN4B_4bit           | FritzStack/HiTOP-QWEN4B-mlx-Q4       |
 | HiTOP     | FritzStack/HiTOP-Llama-3B_4bit     | FritzStack/HiTOP-Llama-3B-mlx-Q4     |
 | HiTOP     | FritzStack/HiTOP-Phi4_4bit         | FritzStack/HiTOP-Phi4-mlx-Q4         |
-| HiTOP     | FritzStack/HiTOP-QWEN8B            |                                      |
+| HiTOP     | FritzStack/HiTOP-QWEN8B_4bit            |                                      |
 | IRF       | FritzStack/IRF-QWEN4B_4bit         | FritzStack/IRF-QWEN4B-mlx-Q4         |
 | IRF       | FritzStack/IRF-QWEN8B_4bit         | FritzStack/IRF-QWEN8B-mlx-Q4         |
 | EMOTIONS  | FritzStack/Llama3B-GoEmotions_4bit | FritzStack/Llama3B-GoEmotions-mlx-Q4 |
