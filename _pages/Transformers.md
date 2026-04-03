@@ -74,12 +74,14 @@ emotioner.predict_emotions(text)
 
 | CATEGORY | Models                 | Models (MLX)                     |
 | --------- | ---------------------------------- | ------------------------------------ |
-| HiTOP     | FritzStack/HiTOP-QWEN4B_4bit           | FritzStack/HiTOP-QWEN4B-mlx-Q4       |
+| HiTOP     | FritzStack/HiTOP-QWEN4B_4bit       | FritzStack/HiTOP-QWEN4B-mlx-Q4       |
 | HiTOP     | FritzStack/HiTOP-Llama-3B_4bit     | FritzStack/HiTOP-Llama-3B-mlx-Q4     |
 | HiTOP     | FritzStack/HiTOP-Phi4_4bit         | FritzStack/HiTOP-Phi4-mlx-Q4         |
-| HiTOP     | FritzStack/HiTOP-QWEN8B_4bit            |                                      |
+| HiTOP     | FritzStack/HiTOP-QWEN8B_4bit       | FritzStack/COGN-QWEN8B-4bit-mlx-Q4   |
 | IRF       | FritzStack/IRF-QWEN4B_4bit         | FritzStack/IRF-QWEN4B-mlx-Q4         |
 | IRF       | FritzStack/IRF-QWEN8B_4bit         | FritzStack/IRF-QWEN8B-mlx-Q4         |
+| COGNITIVE | FritzStack/COGN-QWEN4B-4bit        | FritzStack/COGN-QWEN4B-4bit-mlx-Q4   |
+| COGNITIVE | FritzStack/COGN-QWEN8B-4bit        | FritzStack/COGN-QWEN8B-4bit-mlx-Q4   |
 | EMOTIONS  | FritzStack/Llama3B-GoEmotions_4bit | FritzStack/Llama3B-GoEmotions-mlx-Q4 |
 | EMOTIONS  | FritzStack/QWEN4B-GoEmotions_4bit  | FritzStack/QWEN4B-GoEmotions-mlx-Q4  |
-| EMOTIONS  | FritzStack/RACLETTE-fp16  |   |
+| EMOTIONS  | FritzStack/RACLETTE-fp16           |                                      |
