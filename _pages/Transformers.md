@@ -52,6 +52,33 @@ If you are working with an Apple Silicon Mac (M1/M2/M3/M4 chip), you can run the
 
 ---
 
+## Cognitive Markers 
+
+The **Cognitive** module is grounded in the **ReDepress** framework (Agarwal et al., EMNLP 2025). Drawing on established cognitive theories of depression — particularly those underlying Cognitive Behavioral Therapy (CBT) — the module detects four core cognitive dimensions that have been shown to statistically differentiate individuals at risk of depressive relapse from those in stable remission:
+
+- **Attention Bias** — the tendency to selectively focus on negative (or positive) information while filtering out neutral stimuli
+- **Interpretation Bias** — the tendency to interpret ambiguous situations in a negatively (or positively) skewed way
+- **Memory Bias** — the tendency to recall past experiences through the lens of one's current mood, amplifying negative memories
+- **Rumination** — repetitive, passive focus on negative feelings or memories, further distinguished as *brooding* (maladaptive) vs. *reflection* (adaptive)
+
+```python
+from TONY.Cognitive import CognitivePredictor, CognitivePredictor_mlx
+
+text = 'I keep thinking about how I messed up in college. I should have studied harder and done more with my life.'
+cogn = Cognitive_Predictor(model_name='FritzStack/COGN-QWEN4B-4bit')
+cogn.predict_cognitive(text)
+# Output:
+# Attention Bias: Negative
+# Interpretation Bias: Negative
+# Memory Bias: Negative
+# Rumination: Brooding
+```
+
+If you are working with an Apple Silicon Mac (M1/M2/M3/M4 chip), you can run the model locally using **MLX**, enabling fast and energy-efficient inference without requiring a GPU or internet connection.
+
+
+---
+
 
 ## Emotions as Markers for Specific Mental Health Conditions
 
